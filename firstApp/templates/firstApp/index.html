@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- ---- glypicon ---- -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "firstApp/css/style.css" %}">
+  </head>
+  <body>
+    <div id="all">
+
+      <div class="container">
+        <div class="jumbotron heading">
+          <h1 >Fake News Detection</h1>
+        </div>
+        
+        <div class="jumbotron form">
+          <form action="#pred" method="post" >
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary btn-lg" value="Predict">
+          </form>
+        </div>
+        
+        {% if output == 1 %}
+        <div class="result">
+          <h2 id="pred">Prediction : False</h2>
+        </div>
+        {% endif %}
+        
+        {% if output == 0 %}
+        <div class="result">
+          <h2 id="pred">Prediction : True</h2>
+        </div>
+        {% endif %}
+        
+      </div>
+      
+      <footer>
+        <div>Made with  
+          <i class="fa fa-heart " style="color: red;" ></i> 
+        </div>
+        
+        <a href="{% url 'about' %}">About</a>
+        <div>
+          <a href="https://github.com/swarajpande4/Detecting-Fake-News"><i class='fa fa-github' style="color: white;"></i></a>
+        </div>
+      </footer>
+      
+    </div>
+  </body>
+</html>
