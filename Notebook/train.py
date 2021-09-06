@@ -99,6 +99,7 @@ plot = plot_confusion_matrix(
     normalize = 'pred'
 )
 plot.ax_.set_title("Normalized Confusion Matrix for Support Vector Classifier")
+plt.savefig('ConfMatSVC.png')
 
 # Plotting the accuracies and f1 scores 
 model_names = ['Logistic Regression', 'kNN', 'Support Vector Classifier']
@@ -142,7 +143,8 @@ for bar in plot.patches:
         xytext = (0, 8),
         textcoords = 'offset points'
     )
-    
+ plt.savefig('f1scores.png') 
+
 # Saving the pipelined model
 svc_pipe = Pipeline([
     ('tfidf', TfidfVectorizer()),
