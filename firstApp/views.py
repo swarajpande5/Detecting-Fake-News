@@ -20,3 +20,6 @@ def index(request):
 
 def about(request):
     return render(request, 'firstApp/about.html')
+
+def notebook(request):
+    return render(request, 'firstApp/notebook.html')
