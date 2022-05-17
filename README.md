@@ -7,7 +7,7 @@ Deployment : https://fnewsprediction.herokuapp.com
 Dataset : [Link](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset)
 <br>
 
-### Running at Local Host 
+### Running at local host 
 Pre-requisites include Git, Python 3.4 or newer with **pip**.
 <br>
 These are the steps to follow in order to run the project on local host: 
@@ -32,3 +32,15 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
+<br>
+
+### Pushing changes to deployment
+```
+heroku login
+```
+
+After commits are pushed on GitHub,
+
+```
+git push heroku master
+```
