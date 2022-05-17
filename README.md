@@ -32,8 +32,6 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-<br>
-
 ### Pushing changes to deployment
 ```
 heroku login
