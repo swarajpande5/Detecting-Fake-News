@@ -14,7 +14,7 @@ These are the steps to follow in order to run the project on local host:
 <br>
 
 ```
-git clone https://github.com/swarajpande4/Detecting-Fake-News.git
+git clone https://github.com/swarajpande5/Detecting-Fake-News.git
 ```
 
 ```
